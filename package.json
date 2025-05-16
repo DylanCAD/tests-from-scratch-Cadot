@@ -5,16 +5,21 @@
   "workspaces": [
     "packages/node",
     "packages/react-app",
-    "packages/ng-app"],
+    "packages/ng-app"
+  ],
   "main": "index.js",
   "author": "Dylan.cadot <cadotdylan7@gmail.com>",
   "license": "MIT",
   "scripts": {
-  "build:node": "yarn workspace node tsc",
-  "start:node": "yarn workspace node node dist/index.js",
-  "build:react": "yarn workspace react-app build",
-  "start:react": "yarn workspace react-app start",
-  "build:ng": "yarn workspace ng-app build",
-  "start:ng": "yarn workspace ng-app start"
-}
+    "build:node": "yarn workspace node tsc",
+    "start:node": "yarn workspace node node dist/index.js",
+    "build:react": "yarn workspace react-app build",
+    "start:react": "yarn workspace react-app start",
+    "build:ng": "yarn workspace ng-app build",
+    "start:ng": "yarn workspace ng-app start",
+    "e2e": "playwright test --config=e2e/playwright.config.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
 }
